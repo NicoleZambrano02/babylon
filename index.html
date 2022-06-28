@@ -65,8 +65,7 @@
 
         var scene = new BABYLON.Scene(engine);
 
-        let sphere = BABYLON.SceneLoader.ImportMeshAsync('', '', "https://cdn.glitch.global/98a8f2f5-807a-447a-a52f-a588e742f9f6/Bone.gltf?v=1656020907243", scene);
-
+        let sphere = BABYLON.SceneLoader.ImportMeshAsync('', '', "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedMorphCube/glTF-Binary/AnimatedMorphCube.glb", scene);
 
         scene.createDefaultCamera(true, false, true);
         scene.createDefaultLight();
@@ -93,7 +92,6 @@
         );
 
         mat.diffuseTexture = videoTexture;
-        mat.diffuseTexture.uScale = -1
         sphere.material = mat;
 
         scene.onPointerUp = () => {
